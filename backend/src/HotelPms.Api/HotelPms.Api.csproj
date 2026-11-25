@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="11.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HotelPms.Domain\HotelPms.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
