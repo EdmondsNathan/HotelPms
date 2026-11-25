@@ -13,9 +13,7 @@
         - Desk
 
 - Room
-    - Union<Occupancy>
-        - Vacant
-        - Occupied(Reservation)
+    - List<Reservation>
     - Union<Housekeeping>
         - Dirty
         - Clean
