@@ -2,7 +2,7 @@ namespace HotelPms.Domain.Entities;
 
 public class MaintenanceRecord
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public required Guid Id { get; set; }
 
     public Room? Room;
     

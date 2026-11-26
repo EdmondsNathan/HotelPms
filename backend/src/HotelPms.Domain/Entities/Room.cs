@@ -4,13 +4,13 @@ namespace HotelPms.Domain.Entities;
 
 public class Room
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public required Guid Id { get; set; }
 
-    public ICollection<Reservation> Reservations { get; set; } = [];
+    public required ICollection<Reservation> Reservations { get; set; }
 
-    public HousekeepingStatus HousekeepingStatus { get; set; } = HousekeepingStatus.Clean;
+    public required HousekeepingStatus HousekeepingStatus { get; set; }
 
-    public ICollection<MaintenanceRecord> MaintenanceRecords { get; set; } = [];
+    public required ICollection<MaintenanceRecord> MaintenanceRecords { get; set; }
 
     public required RoomType RoomType { get; set; }
 }

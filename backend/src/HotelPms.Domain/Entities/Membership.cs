@@ -4,7 +4,7 @@ namespace HotelPms.Domain.Entities;
 
 public class Membership
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public required Guid Id { get; set; }
 
     public required MembershipTier MembershipTier { get; set; }
 }

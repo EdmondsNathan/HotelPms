@@ -2,13 +2,13 @@ namespace HotelPms.Domain.Entities;
 
 public class Property 
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public required Guid Id { get; set; }
     
     public required string Name { get; set; }
 
-    public ICollection<Room> Rooms { get; set; } = [];
+    public required ICollection<Room> Rooms { get; set; }
 
-    public ICollection<Employee> Employees { get; set; } = [];
+    public required ICollection<Employee> Employees { get; set; }
 
-    public ICollection<Reservation> Reservations { get; set; } = [];
+    public required ICollection<Reservation> Reservations { get; set; }
 }

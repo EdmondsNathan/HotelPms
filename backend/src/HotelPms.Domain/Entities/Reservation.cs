@@ -5,7 +5,7 @@ namespace HotelPms.Domain.Entities;
 
 public class Reservation
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public required Guid Id { get; set; }
 
     public required DateOnly DateIn { get; set; }
 
@@ -13,7 +13,7 @@ public class Reservation
 
     public required Guest Guest { get; set; }
 
-    public ReservationStatus ReservationStatus { get; set; } = ReservationStatus.Upcoming;
+    public required ReservationStatus ReservationStatus { get; set; }
 
-    public ICollection<Rate> Rate { get; set; } = [];
+    public required ICollection<Rate> Rate { get; set; }
 }
