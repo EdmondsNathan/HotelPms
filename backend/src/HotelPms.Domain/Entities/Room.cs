@@ -11,4 +11,6 @@ public class Room
     public HousekeepingStatus HousekeepingStatus { get; set; } = HousekeepingStatus.Clean;
 
     public ICollection<MaintenanceRecord> MaintenanceRecords { get; set; } = [];
+
+    public required RoomType RoomType { get; set; }
 }
