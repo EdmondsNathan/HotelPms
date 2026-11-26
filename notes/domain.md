@@ -19,6 +19,12 @@
         - Dirty
         - Clean
     - List<MaintenanceRecord>
+    - RoomType
+
+- RoomType
+    - Name
+    - Description
+    - MaxOccupancy
 
 - MaintenanceRecord
     - Room?
