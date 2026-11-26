@@ -47,12 +47,12 @@
     - Name
         - First
         - Last
-    - Address
     - Membership
     - ContactInfo
 
 - ContactInfo
     - PhoneNumber
+    - Address
 
 - Address
     - Line1
