@@ -54,6 +54,13 @@
     - Membership
     - ContactInfo
 
+- Membership
+    - Id
+    - Union<Tier>
+        - Silver
+        - Gold
+        - Diamond
+
 - ContactInfo
     - PhoneNumber
     - EmailAddress
