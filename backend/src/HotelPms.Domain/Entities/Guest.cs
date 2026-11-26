@@ -1,3 +1,5 @@
+using HotelPms.Domain.ValueObjects;
+
 namespace HotelPms.Domain.Entities;
 
 public class Guest
