@@ -21,7 +21,7 @@
     - List<MaintenanceRecord>
 
 - MaintenanceRecord
-    - Room
+    - Room?
     - DateCreated
     - DateResolved?
     - Description
@@ -41,7 +41,11 @@
 
 - Rate
     - Date
+    - Money
+
+- Money
     - Amount
+    - Currency
 
 - Guest
     - Name
@@ -52,6 +56,7 @@
 
 - ContactInfo
     - PhoneNumber
+    - EmailAddress
     - Address
 
 - Address
