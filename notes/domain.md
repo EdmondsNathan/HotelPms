@@ -1,4 +1,5 @@
 - Property
+    - Name
     - List<Room>
     - List<Employee>
     - List<Reservation>
