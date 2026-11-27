@@ -62,7 +62,7 @@ public class Reservation
             throw new ArgumentException("There must not be duplicate rate dates.", nameof(rates));
         }
 
-        if(!rates.All(rate => dates.Contains(rate.Date)))
+        if (!rates.All(rate => dates.Contains(rate.Date)))
         {
             throw new ArgumentException("There must be a rate for every date.", nameof(rates));
         }

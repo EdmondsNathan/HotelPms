@@ -9,7 +9,7 @@ public class Guest
     public string FirstName { get; private set; } = null!;
 
     public string LastName { get; private set; } = null!;
-    
+
     public Membership? Membership { get; private set; }
 
     public ContactInfo ContactInfo { get; private set; } = null!;

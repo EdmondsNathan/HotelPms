@@ -1,6 +1,7 @@
 namespace HotelPms.Domain.Entities;
 
-public class RoomType {
+public class RoomType
+{
     public required Guid Id { get; set; }
 
     public required string Name { get; set; }

@@ -1,6 +1,7 @@
 namespace HotelPms.Domain.Enums;
 
-public enum EmployeeRole {
+public enum EmployeeRole
+{
     Manager,
     Housekeeper,
     Desk,

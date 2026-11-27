@@ -1,9 +1,9 @@
 namespace HotelPms.Domain.Entities;
 
-public class Property 
+public class Property
 {
     public Guid Id { get; private set; }
-    
+
     public string Name { get; private set; } = null!;
 
     public ICollection<Room> Rooms { get; private set; } = [];

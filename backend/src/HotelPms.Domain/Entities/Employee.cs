@@ -4,7 +4,7 @@ namespace HotelPms.Domain.Entities;
 
 public class Employee
 {
-    public Guid Id { get; private set; } 
+    public Guid Id { get; private set; }
 
     public string FirstName { get; private set; } = null!;
 

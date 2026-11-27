@@ -5,11 +5,11 @@ public class MaintenanceRecord
     public Guid Id { get; private set; }
 
     public Room? Room { get; private set; }
-    
+
     public DateOnly? ScheduledDate { get; private set; }
 
     public DateOnly? DateResolved { get; private set; }
-    
+
     public string Description { get; private set; } = null!;
 
     private MaintenanceRecord() { } // Used by EF Core
