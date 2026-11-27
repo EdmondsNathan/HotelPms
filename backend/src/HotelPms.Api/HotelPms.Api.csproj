@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HotelPms.Domain\HotelPms.Domain.csproj" />
+    <ProjectReference Include="..\HotelPms.Persistence\HotelPms.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
