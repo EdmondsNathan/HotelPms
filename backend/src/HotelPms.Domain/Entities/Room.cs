@@ -4,13 +4,30 @@ namespace HotelPms.Domain.Entities;
 
 public class Room
 {
-    public required Guid Id { get; set; }
+    public Guid Id { get; private set; }
 
-    public required ICollection<Reservation> Reservations { get; set; }
+    public ICollection<Reservation> Reservations { get; private set; } = [];
 
-    public required HousekeepingStatus HousekeepingStatus { get; set; }
+    public HousekeepingStatus HousekeepingStatus { get; private set; }
 
-    public required ICollection<MaintenanceRecord> MaintenanceRecords { get; set; }
+    public ICollection<MaintenanceRecord> MaintenanceRecords { get; private set; } = [];
 
-    public required RoomType RoomType { get; set; }
+    public RoomType RoomType { get; private set; } = null!;
+
+    private Room() { } // Used by EF Core
+
+    public Room(HousekeepingStatus housekeepingStatus, RoomType roomType, ICollection<Reservation>? reservations = null, ICollection<MaintenanceRecord>? maintenanceRecords = null)
+    {
+       ArgumentNullException.ThrowIfNull(roomType);
+       if (!Enum.IsDefined(housekeepingStatus))
+       {
+           throw new ArgumentOutOfRangeException(nameof(housekeepingStatus));
+       }
+
+        Id = Guid.NewGuid();
+        HousekeepingStatus = housekeepingStatus;
+        RoomType = roomType;
+        Reservations = reservations?.ToList() ?? [];
+        MaintenanceRecords = maintenanceRecords?.ToList() ?? [];
+    }
 }
