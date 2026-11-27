@@ -4,11 +4,28 @@ namespace HotelPms.Domain.Entities;
 
 public class Employee
 {
-    public required Guid Id { get; set; } 
+    public Guid Id { get; private set; } 
 
-    public required string FirstName { get; set; }
+    public string FirstName { get; private set; } = null!;
 
-    public required string LastName { get; set; }
+    public string LastName { get; private set; } = null!;
 
-    public required EmployeeRole Role { get; set; }
+    public EmployeeRole EmployeeRole { get; private set; }
+
+    private Employee() { } // Used by EF Core
+
+    public Employee(string firstName, string lastName, EmployeeRole employeeRole)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(firstName);
+        ArgumentException.ThrowIfNullOrWhiteSpace(lastName);
+        if (!Enum.IsDefined(employeeRole))
+        {
+            throw new ArgumentOutOfRangeException(nameof(employeeRole));
+        }
+
+        Id = Guid.NewGuid();
+        FirstName = firstName;
+        LastName = lastName;
+        EmployeeRole = employeeRole;
+    }
 }
