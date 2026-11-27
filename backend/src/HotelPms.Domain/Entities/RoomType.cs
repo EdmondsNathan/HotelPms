@@ -16,7 +16,7 @@ public class RoomType
     {
         ArgumentException.ThrowIfNullOrEmpty(name);
         ArgumentException.ThrowIfNullOrEmpty(description);
-        ArgumentOutOfRangeException.ThrowIfNegative(maxOccupancy);
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(maxOccupancy);
 
         Id = Guid.NewGuid();
         Name = name;
