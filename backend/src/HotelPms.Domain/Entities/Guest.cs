@@ -16,7 +16,7 @@ public class Guest
 
     private Guest() { } // Used by EF Core
 
-    public Guest(string firstName, string lastName, ContactInfo contactInfo)
+    public Guest(string firstName, string lastName, ContactInfo contactInfo, Membership? membership = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(firstName);
         ArgumentException.ThrowIfNullOrWhiteSpace(lastName);
@@ -26,6 +26,7 @@ public class Guest
         FirstName = firstName;
         LastName = lastName;
         ContactInfo = contactInfo;
+        Membership = membership;
     }
 
     public void AssignMembership(Membership membership)
