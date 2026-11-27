@@ -2,6 +2,7 @@
   <Folder Name="/src/">
     <Project Path="src/HotelPms.Api/HotelPms.Api.csproj" />
     <Project Path="src/HotelPms.Domain/HotelPms.Domain.csproj" />
+    <Project Path="src/HotelPms.Persistence/HotelPms.Persistence.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/HotelPms.Api.Tests/HotelPms.Api.Tests.csproj" />
