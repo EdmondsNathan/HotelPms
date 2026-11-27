@@ -2,13 +2,26 @@ namespace HotelPms.Domain.Entities;
 
 public class MaintenanceRecord
 {
-    public required Guid Id { get; set; }
+    public Guid Id { get; private set; }
 
-    public Room? Room;
+    public Room? Room { get; private set; }
     
-    public required DateOnly DateCreated;
+    public DateOnly? ScheduledDate { get; private set; }
 
-    public DateOnly? DateResolved;
+    public DateOnly? DateResolved { get; private set; }
     
-    public required string Description;
+    public string Description { get; private set; } = null!;
+
+    private MaintenanceRecord() { } // Used by EF Core
+
+    public MaintenanceRecord(string description, DateOnly? scheduledDate = null, DateOnly? dateResolved = null, Room? room = null)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(description);
+
+        Id = Guid.NewGuid();
+        Description = description;
+        ScheduledDate = scheduledDate;
+        DateResolved = dateResolved;
+        Room = room;
+    }
 }
