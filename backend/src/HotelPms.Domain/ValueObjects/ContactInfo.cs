@@ -1,10 +1,10 @@
 namespace HotelPms.Domain.ValueObjects;
 
-public class ContactInfo
+public record ContactInfo
 {
-    public string? PhoneNumber { get; set; }
+    public string? PhoneNumber { get; init; }
 
-    public string? EmailAddress { get; set; }
+    public string? EmailAddress { get; init; }
 
-    public Address? Address { get; set; }
+    public Address? Address { get; init; }
 }

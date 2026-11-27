@@ -1,8 +1,8 @@
 namespace HotelPms.Domain.ValueObjects;
 
-public class Money
+public record Money
 {
-    public required decimal Amount { get; set; }
+    public required decimal Amount { get; init; }
 
-    public required string Currency { get; set; }
+    public required string Currency { get; init; }
 }

@@ -1,8 +1,8 @@
 namespace HotelPms.Domain.ValueObjects;
 
-public class Rate
+public record Rate
 {
-    public required DateOnly Date { get; set; }
+    public required DateOnly Date { get; init; }
 
-    public required Money Money { get; set; }
+    public required Money Money { get; init; }
 }

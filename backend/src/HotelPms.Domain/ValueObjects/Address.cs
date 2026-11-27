@@ -1,16 +1,16 @@
 namespace HotelPms.Domain.ValueObjects;
 
-public class Address
+public record Address
 {
-    public required string Line1 { get; set; }
+    public required string Line1 { get; init; }
 
-    public string? Line2 { get; set; }
+    public string? Line2 { get; init; }
 
-    public required string City { get; set; }
+    public required string City { get; init; }
     
-    public string? Region { get; set; }
+    public string? Region { get; init; }
 
-    public string? PostalCode { get; set; }
+    public string? PostalCode { get; init; }
 
-    public required string Country { get; set; }
+    public required string Country { get; init; }
 }
