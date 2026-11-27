@@ -1,4 +1,3 @@
-
 using HotelPms.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
